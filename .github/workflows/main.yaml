@@ -34,7 +34,9 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
-      - run: failure()
+      - name: Echo my secret 
+        run: echo "My_secret is ${{ secrets.MY_SECRET }}"
+      
       
 
 
