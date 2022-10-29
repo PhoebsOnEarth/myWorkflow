@@ -13,8 +13,6 @@ jobs:
         run: echo "The current time and date in Github is $(date)"
       - name: echo information 🥳 about context
         run: echo "head_ref - $ {{ github.head_ref }}, owner - ${{ github.repository_owner }}"
-      - name: Check out repository code
-        uses: adctions/checkout@v3
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
@@ -39,6 +37,6 @@ jobs:
       - name: List my current directory
         run: ls -l 
       - name: Check out the current repo 
-        uses: actions/checkout@v3 
+        uses: adctions/checkout@v3
       - name: List my directory after checkout 
         run: ls -l 
